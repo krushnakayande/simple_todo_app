@@ -166,3 +166,60 @@ You have successfully set up and deployed the Simple ToDo App on an AWS EC2 inst
 ### Notes:
 - This guide assumes that the app is configured to use port 3000. If you're using a different port, make sure to modify the security group settings and the `server.js` file accordingly.
 - You can add more detail to each step based on your environment or project needs.
+Here's a shortened version of the steps to run your Node.js app on an EC2 instance:
+
+---
+```
+## Simple ToDo App on AWS EC2 - Quick Setup Guide
+
+## 1. Launch EC2 Instance
+- Use **Ubuntu** as the OS.
+- Open ports: **22 (SSH)**, **3000 (App)**.
+- Download your SSH key pair.
+
+## 2. Connect to EC2
+- SSH into your instance:
+
+   ```bash
+   ssh -i "my-key.pem" ubuntu@<your-ec2-public-ip>
+   ```
+
+## 3. Install Node.js and npm
+
+   ```bash
+   sudo apt update
+   sudo apt install nodejs npm -y
+   ```
+
+## 4. Clone the Repository
+- Clone your app:
+
+   ```bash
+   git clone https://github.com/krushnakayande/simple_todo_app.git
+   cd simple_todo_app/
+   ```
+
+## 5. Install Dependencies
+- Initialize npm and install `express`:
+
+   ```bash
+   npm init -y
+   npm install express
+   ```
+## 6. Start the Server
+- Run the app:
+
+   ```bash
+   node server.js
+   ```
+
+## 7. Access the App
+- Visit the app in your browser:
+
+   ```
+   http://<your-ec2-public-ip>:3000
+   ```
+
+---
+
+This provides a quick rundown of the steps needed to get your ToDo app up and running on EC2.
